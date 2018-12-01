@@ -11,5 +11,5 @@ def draw_hexagon(x, y, side_len, color):
 def main():
     #TODO
 
-if __name__ == "__msin__":
+if __name__ == "__main__":
     main()
