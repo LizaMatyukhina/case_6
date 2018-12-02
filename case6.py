@@ -1,40 +1,39 @@
 from turtle import *
 
-def get_num_hexagons(number):
+def get_num_hexagons():
     """ Finding side lenght of hexagons. """
+    number = int(input())
     d = 500 / number
     return d
 
-def get_color_choice():
-    #TODO
-
-def draw_hexagon(d):
+def draw_hexagon(side_len, color_input, x=0, y=0):
     """ Drawing hexagon. """
-    side_len = (d / 2) * 3 ** .5
+    side = (side_len / 2) * 3 ** .5
     penup()
     pendown()
-    color('black')
+    goto(x, y)
+    color(color_input)
     begin_fill()
     for i in range(6):
-        forward(side_len)
+        forward(side)
         left(60)
     end_fill()
     left(120)
     for i in range(2):
-        forward(side_len)
+        forward(side)
         right(60)
     penup()
 
 
 def main():
     """ Main function. """
-    number_of_hexagons = int(input())
-    side_len = get_num_hexagons(number_of_hexagons)
+    d = get_num_hexagons()
     right(90)
     penup()
-    for i in range(number_of_hexagons):
-        draw_hexagon(side_len)
+    color_input = input()
+    draw_hexagon(d, color_input)
     done()
+
 
 if __name__ == "__main__":
     main()
