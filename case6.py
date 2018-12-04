@@ -49,12 +49,11 @@ def get_color_choice(color):
                 color = 'pink'
             return color
         else:
-            color = input("'"+color+"'"+ CORRECT_VALUE).lower()
+            color = input("'" + color + "'" + CORRECT_VALUE).lower()
             return get_color_choice(color)
     except ValueError:
-        color = input("'" + color + "'"+CORRECT_VALUE).lower()
+        color = input("'" + color + "'" + CORRECT_VALUE).lower()
         return get_color_choice(color)
-
 
 
 def draw_hexagon(side_len, color_input, x, y):
